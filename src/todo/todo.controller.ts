@@ -11,7 +11,7 @@ export class TodoController {
 
   @Post()
   postTodo(@Body('title') title: string, @Body('subtitle') subtitle: string) {
-    this.todoService.addTodo(title, subtitle);
+    return this.todoService.addTodo(title, subtitle);
   }
 
   @Delete('/:id')
